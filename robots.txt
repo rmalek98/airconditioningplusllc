@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /portal/
+Disallow: /tech/
+Disallow: /dispatch/
+Disallow: /owner/
+Disallow: /django-admin/
+Sitemap: https://rmalek98.github.io/airconditioningplusllc/sitemap.xml

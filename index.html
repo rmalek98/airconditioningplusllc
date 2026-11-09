@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air Conditioning Plus — HVAC Repair, Install & Maintenance</title>
+<meta name="description" content="Licensed Tampa HVAC contractor: AC repair, installation and replacement, heat pumps, mini-splits, ductwork and 24/7 emergency service in Tampa, St. Petersburg, Clearwater and surrounding areas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%2314d3c4%27/%3E%3Cpath d=%27M7 12h12a3 3 0 1 0-3-3M7 16h16a3 3 0 1 1-3 3M7 20h8%27 fill=%27none%27 stroke=%27%2304101a%27 stroke-width=%273%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<link rel="canonical" href="https://rmalek98.github.io/airconditioningplusllc/">
+<meta property="og:title" content="Air Conditioning Plus"><meta property="og:description" content="Licensed Tampa HVAC contractor: AC repair, installation and replacement, heat pumps, mini-splits, ductwork and 24/7 emergency service in Tampa, St. Petersburg, Clearwater and surrounding areas."><meta property="og:type" content="website">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HVACBusiness", "name": "Air Conditioning Plus", "legalName": "Air Conditioning Plus Cooling & Heating LLC", "url": "https://rmalek98.github.io/airconditioningplusllc/", "description": "Licensed Tampa HVAC contractor: AC repair, installation and replacement, heat pumps, mini-splits, ductwork and 24/7 emergency service in Tampa, St. Petersburg, Clearwater and surrounding areas.", "telephone": "+16562034099", "address": {"@type": "PostalAddress", "addressLocality": "Tampa", "addressRegion": "FL", "addressCountry": "US"}, "areaServed": [{"@type": "City", "name": "Tampa"}, {"@type": "City", "name": "St. Petersburg"}, {"@type": "City", "name": "Clearwater"}, {"@type": "City", "name": "Lakeland"}, {"@type": "City", "name": "Sarasota"}, {"@type": "City", "name": "Orlando"}, {"@type": "City", "name": "Brandon"}, {"@type": "City", "name": "Sun City"}, {"@type": "City", "name": "Ruskin"}], "sameAs": ["https://www.facebook.com/profile.php?id=61589888590509", "https://www.instagram.com/acpluscoolingnheating"], "openingHours": "Mo-Su 00:00-23:59"}</script>
+<link rel="stylesheet" href="/airconditioningplusllc/static/css/site.css">
+<style>:root{--acc:#14d3c4;--acc2:#3b82f6;--glow:20,211,196}body.heat{--acc:#ff8a3d;--acc2:#ff3d6e;--glow:255,138,61}</style>
+<script src="/airconditioningplusllc/static/js/site.js"></script><script defer src="/airconditioningplusllc/static/alpine.min.js"></script></head>
+
+<body>
+<nav x-data="{open:false}"><div class="wrap">
+  <a href="/airconditioningplusllc/" class="logo"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#04101a" stroke-width="2.4" stroke-linecap="round"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/></svg></i>Air Conditioning Plus</a>
+  <div class="links">
+    <a href="/airconditioningplusllc/services/" class="">Services</a>
+    <a href="/airconditioningplusllc/commercial/" class="">Commercial</a>
+    <a href="/airconditioningplusllc/service-areas/" class="">Service Areas</a>
+    
+    
+    <a href="/airconditioningplusllc/tips/" class="">Tips</a>
+    <a href="/airconditioningplusllc/about/" class="">About</a>
+    <a href="/airconditioningplusllc/contact/" class="">Contact</a>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center">
+    <a href="tel:+16562034099" class="btn sm hide-sm" style="white-space:nowrap">📞 656-203-4099</a><a href="/airconditioningplusllc/contact/" class="btn pri sm" style="white-space:nowrap">Request service</a>
+    
+    <button class="burger" @click="open=!open" aria-label="Menu" x-text="open?'✕':'☰'"></button></div>
+</div>
+<div class="mobmenu" x-show="open" x-cloak @click="open=false"><a href="/airconditioningplusllc/services/">Services</a><a href="/airconditioningplusllc/commercial/">Commercial</a><a href="/airconditioningplusllc/service-areas/">Service areas</a><a href="/airconditioningplusllc/tips/">Tips</a><a href="/airconditioningplusllc/about/">About</a><a href="/airconditioningplusllc/contact/">Contact</a></div></nav>
+
+
+<header class="hero" id="top" x-data="hero()" x-init="init()">
+  <canvas x-ref="air" id="air"></canvas>
+  <div class="wrap">
+    <div>
+      <div class="pill"><span class="dot"></span> 24/7 emergency availability · Weekend appointments available</div>
+      <h1>Get the job done<br><span class="grad">right the first time.</span></h1>
+      
+      <p class="sub">Tampa, FL heating and cooling — repair, installation and maintenance. Call us or send a request online and we'll take it from there.</p>
+      <div class="cta"><a href="/airconditioningplusllc/contact/" class="btn pri">Request service →</a><a href="tel:+16562034099" class="btn">📞 656-203-4099</a></div>
+      <p class="muted" style="margin-top:18px;font-size:14px">Licensed contractor · CAC1825106</p>
+    </div>
+    <div class="card thermo">
+      <div class="modes"><button :class="{on:mode==='cool'}" @click="setMode('cool')">❄ Cool</button><button :class="{on:mode==='heat'}" @click="setMode('heat')">🔥 Heat</button></div>
+      <div class="dial"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="12" stroke-linecap="round" stroke-dasharray="405 540"/>
+        <circle cx="100" cy="100" r="86" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round" :stroke-dasharray="dialLen+' 540'" style="transition:stroke-dasharray .5s var(--ease);filter:drop-shadow(0 0 8px rgba(var(--glow),.9))"/>
+        <defs><linearGradient id="g"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs></svg>
+        <div class="val"><small>set to</small><b><span x-text="target"></span>°</b><small x-text="'now '+current.toFixed(1)+'° · '+(current===target?'holding':'adjusting')"></small></div></div>
+      <div class="tstep"><button @click="bump(-1)">−</button><button @click="bump(1)">+</button></div>
+      <p>Try it — the whole site responds to the season.</p>
+    </div>
+  </div>
+</header>
+
+<script id="statdata" type="application/json">[{"text": "24/7", "label": "Emergency availability"}, {"text": "Weekends", "label": "Appointments available"}, {"text": "CAC1825106", "label": "Licensed Florida HVAC contractor"}, {"to": 9, "fmt": "{v}", "label": "Cities served, plus surrounding towns"}]</script>
+<div class="wrap stats" x-data="counters(JSON.parse(document.getElementById('statdata').textContent))" x-init="init()">
+  <template x-for="s in stats"><div class="card stat"><b class="grad" x-text="fmt(s)"></b><span x-text="s.label"></span></div></template>
+</div>
+
+<section><div class="wrap">
+  <div class="eyebrow">What we do</div><h2>Residential &amp; commercial. <span class="grad">Done right.</span></h2><p class="sub">Pick a service to see what's covered, the warning signs, and how to book.</p>
+  <div class="grid3">
+    <a href="/airconditioningplusllc/services/ac-repair/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5L4.9 17.5M9 4l3 2 3-2M9 20l3-2 3 2"/></svg>
+
+</div><h3>AC Repair</h3>
+      <p>Warm air, weak airflow, strange noises, a system that won&#x27;t start. We diagnose the cause and repair it.</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/ac-installation/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+
+</div><h3>AC Installation</h3>
+      <p>A system that&#x27;s too big or too small wastes energy and leaves Florida humidity behind. Equipment should …</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/ac-replacement/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
+
+</div><h3>AC Replacement</h3>
+      <p>If your system is older, repair bills keep stacking up, or it can&#x27;t keep your home comfortable, replacem…</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/maintenance/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM9 12l2 2 4-4"/></svg>
+
+</div><h3>HVAC Maintenance</h3>
+      <p>In Florida your AC works hard for most of the year. Regular maintenance helps it run efficiently and cat…</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/ductwork/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M3 8h13l5 4-5 4H3zM8 8v8M13 8v8"/></svg>
+
+</div><h3>Ductwork Installation &amp; Repair</h3>
+      <p>Leaky, undersized or poorly insulated ducts waste cooling and can cause hot rooms, sweating and indoor a…</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/mini-split/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="4" width="18" height="8" rx="2"/><path d="M7 16c0 2 2 2 2 4M12 16c0 2 2 2 2 4M17 16c0 2 2 2 2 4"/></svg>
+
+</div><h3>Mini-Split Installation</h3>
+      <p>Mini-splits cool (and heat) individual spaces without ductwork — ideal for additions, garages, converted…</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/heat-pump-install/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><path d="M12 8v8M8 12h8"/></svg>
+
+</div><h3>Heat Pump Installation</h3>
+      <p>Heat pumps move heat instead of generating it, which makes them an efficient choice for Florida&#x27;s long c…</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/heat-pump-repair/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="4"/><path d="M12 8v8M8 12h8"/></svg>
+
+</div><h3>Heat Pump Repair</h3>
+      <p>Because a heat pump handles both cooling and heating, a problem can show up in any season. We diagnose a…</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/commercial/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 21V5l8-2v18M12 9l8 2v10M2 21h20M8 9h1M8 13h1M8 17h1M16 15h1M16 18h1"/></svg>
+
+</div><h3>Commercial HVAC Services</h3>
+      <p>A comfortable shop, office or restaurant keeps customers and staff happy. We service HVAC for light comm…</p><div class="from">Request a quote →</div></a>
+    <a href="/airconditioningplusllc/services/emergency/" class="card svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M7 18v-6a5 5 0 0 1 10 0v6M5 21h14M12 3V2M4.5 6.5l-1-1M19.5 6.5l1-1"/></svg>
+
+</div><h3>Emergency HVAC</h3>
+      <p>A failed AC in Florida heat is more than uncomfortable. We offer 24/7 emergency availability — call us, …</p><div class="from">Request a quote →</div></a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div style="text-align:center"><div class="eyebrow">Why it matters here</div><h2>Built for <span class="grad">Tampa.</span></h2></div>
+  <div class="grid3"><div class="card svc reveal" style="cursor:default"><h3>Built for Florida</h3><p>Florida systems run nearly year-round, so sizing, airflow and regular maintenance matter more here than almost anywhere.</p></div><div class="card svc reveal" style="cursor:default"><h3>Humidity matters as much as temperature</h3><p>A right-sized system removes moisture as it cools. Oversized or neglected equipment can leave a house cold and clammy.</p></div><div class="card svc reveal" style="cursor:default"><h3>Ready before the storm</h3><p>Whether you need an outdoor unit checked before hurricane season or a quick fix after a power surge, we&#x27;re a call away.</p></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div style="text-align:center"><div class="eyebrow">How it works</div><h2>From breakdown to <span class="grad">back to normal.</span></h2></div>
+  <div class="how"><div class="card reveal"><h3>Tell us what&#x27;s wrong</h3><p>Call us or send a request online. Tell us what the system is doing and where you are.</p></div><div class="card reveal"><h3>We confirm your visit</h3><p>We get back to you to confirm the timing — and for emergencies, as quickly as we can.</p></div><div class="card reveal"><h3>A technician takes a look</h3><p>A technician diagnoses the problem and talks you through your options.</p></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Service areas</div><h2>Serving <span class="grad">Tampa &amp; nearby.</span></h2>
+  <div class="chips"><a href="/airconditioningplusllc/service-areas/tampa/" class="chip">Tampa</a><a href="/airconditioningplusllc/service-areas/st-petersburg/" class="chip">St. Petersburg</a><a href="/airconditioningplusllc/service-areas/clearwater/" class="chip">Clearwater</a><a href="/airconditioningplusllc/service-areas/lakeland/" class="chip">Lakeland</a><a href="/airconditioningplusllc/service-areas/sarasota/" class="chip">Sarasota</a><a href="/airconditioningplusllc/service-areas/orlando/" class="chip">Orlando</a><a href="/airconditioningplusllc/service-areas/brandon/" class="chip">Brandon</a><a href="/airconditioningplusllc/service-areas/sun-city/" class="chip">Sun City</a><a href="/airconditioningplusllc/service-areas/ruskin/" class="chip">Ruskin</a><a href="/airconditioningplusllc/service-areas/" class="chip alt">…and surrounding towns</a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="card band reveal"><div><div class="eyebrow">Commercial</div><h2>Keep your <span class="grad">business comfortable.</span></h2>
+    <p class="sub" style="margin-bottom:8px">Repair, replacement and maintenance for light commercial properties — shops, offices and restaurants.</p>
+    <div class="cta"><a href="/airconditioningplusllc/commercial/" class="btn pri">Commercial services →</a></div></div>
+    <ul><li>Repair and troubleshooting</li><li>Replacement and new installs</li><li>Preventive maintenance</li><li>Emergency service</li></ul></div>
+</div></section>
+
+
+
+<section><div class="wrap">
+  
+  <div style="text-align:center;margin-top:0"><a class="btn" href="/airconditioningplusllc/reviews/">See what customers say →</a></div>
+</div></section>
+
+<section><div class="wrap two-col"><div><div class="eyebrow">Questions</div><h2>Good to <span class="grad">know.</span></h2><p class="sub">Can't find your answer? <a href="/airconditioningplusllc/contact/" style="color:var(--acc)">Ask us directly.</a></p></div><div><details><summary>Are you licensed?</summary><p>Yes. Air Conditioning Plus Cooling &amp; Heating LLC is a licensed Florida HVAC contractor, license CAC1825106.</p></details><details><summary>Do you offer emergency service?</summary><p>Yes — 24/7 emergency availability. Call 656-203-4099 or use the emergency button to request a visit.</p></details><details><summary>Do you work weekends?</summary><p>Weekend appointments are available.</p></details><details><summary>Where do you work?</summary><p>Tampa, St. Petersburg, Clearwater, Lakeland, Sarasota, Orlando, Brandon, Sun City, Ruskin and surrounding towns. Not sure about your address? Contact us.</p></details><details><summary>Do you work on residential and commercial systems?</summary><p>Both. We handle residential systems and light commercial properties.</p></details><details><summary>How do I get a price?</summary><p>Call us or send a request through the contact page and we&#x27;ll go over the details with you.</p></details>
+</div></div></section>
+<section class="tight"><div class="wrap"><div class="card ctaband reveal"><h2>Ready for <span class="grad">comfort that works?</span></h2><p class="sub" style="margin:0 auto 24px">Tell us what's going on — or call 656-203-4099.</p>
+<div class="cta" style="justify-content:center"><a href="/airconditioningplusllc/contact/" class="btn pri">Request service →</a><a href="tel:+16562034099" class="btn">📞 Call now</a></div></div></div></section>
+
+
+
+<footer class="foot"><div class="wrap">
+  <div class="cols">
+    <div><div class="logo" style="color:var(--tx);margin-bottom:12px">Air Conditioning Plus</div><p>Get the job done right the first time.</p>
+      <p style="margin-top:12px"><a href="tel:+16562034099" style="color:var(--acc);font-weight:600;font-size:18px">656-203-4099</a></p>
+      <p style="margin-top:6px;font-size:14px">24/7 emergency availability · Weekend appointments available</p>
+      <p style="margin-top:6px;font-size:14px">Licensed HVAC contractor · CAC1825106</p>
+      <p style="margin-top:12px;display:flex;gap:14px"><a style="display:inline" href="https://www.facebook.com/profile.php?id=61589888590509" target="_blank" rel="noopener">Facebook</a><a style="display:inline" href="https://www.instagram.com/acpluscoolingnheating" target="_blank" rel="noopener">Instagram</a><a style="display:inline" href="https://search.google.com/local/writereview?placeid=ChIJ-WCba_6ks0cR1UY0H2CK7_k" target="_blank" rel="noopener">Google reviews</a></p></div>
+    <div><h4>Services</h4><a href="/airconditioningplusllc/services/ac-repair/">AC Repair</a><a href="/airconditioningplusllc/services/ac-installation/">AC Installation</a><a href="/airconditioningplusllc/services/ac-replacement/">AC Replacement</a><a href="/airconditioningplusllc/services/maintenance/">HVAC Maintenance</a><a href="/airconditioningplusllc/services/ductwork/">Ductwork Installation &amp; Repair</a><a href="/airconditioningplusllc/services/mini-split/">Mini-Split Installation</a><a href="/airconditioningplusllc/services/heat-pump-install/">Heat Pump Installation</a><a href="/airconditioningplusllc/services/heat-pump-repair/">Heat Pump Repair</a><a href="/airconditioningplusllc/services/commercial/">Commercial HVAC Services</a><a href="/airconditioningplusllc/services/emergency/">Emergency HVAC</a></div>
+    <div><h4>Service areas</h4><a href="/airconditioningplusllc/service-areas/tampa/">Tampa</a><a href="/airconditioningplusllc/service-areas/st-petersburg/">St. Petersburg</a><a href="/airconditioningplusllc/service-areas/clearwater/">Clearwater</a><a href="/airconditioningplusllc/service-areas/lakeland/">Lakeland</a><a href="/airconditioningplusllc/service-areas/sarasota/">Sarasota</a><a href="/airconditioningplusllc/service-areas/orlando/">Orlando</a><a href="/airconditioningplusllc/service-areas/brandon/">Brandon</a><a href="/airconditioningplusllc/service-areas/sun-city/">Sun City</a><a href="/airconditioningplusllc/service-areas/ruskin/">Ruskin</a></div>
+    <div><h4>Customers</h4><a href="/airconditioningplusllc/contact/">Request service</a><a href="/airconditioningplusllc/tips/">Tips &amp; guides</a><a href="/airconditioningplusllc/reviews/">Reviews</a><a href="/airconditioningplusllc/contact/">Contact</a><a href="/airconditioningplusllc/privacy/">Privacy</a></div>
+  </div>
+  <div class="base"><span>© 2026 Air Conditioning Plus Cooling &amp; Heating LLC · CAC1825106</span></div>
+</div></footer>
+
+<div class="callbar"><a href="tel:+16562034099" class="btn pri">📞 Call 656-203-4099</a><a href="/airconditioningplusllc/contact/" class="btn">Request online</a></div>
+<a href="tel:+16562034099" class="sos">🚨 <span>Emergency? Call now</span></a>
+
+
+</body></html>
