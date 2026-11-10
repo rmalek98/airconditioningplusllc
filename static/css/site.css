@@ -314,3 +314,25 @@ html,body{overflow-x:clip}
 .nav.stuck:before{background:rgba(6,11,20,.88);border-bottom-color:var(--line);box-shadow:0 10px 40px -20px #000}
 body.heat .nav.stuck:before{background:rgba(13,9,7,.88)}
 .sheet{top:72px;bottom:0;left:0;right:0;inset:auto;position:fixed;top:72px;height:calc(100vh - 72px);height:calc(100dvh - 72px)}
+
+/* ---- work gallery + photo headers ---- */
+.filters{display:flex;gap:8px;margin:22px 0 18px;flex-wrap:wrap}
+.filters button{padding:9px 18px;border-radius:99px;border:1px solid var(--line);background:none;color:var(--mut);cursor:pointer;font-weight:600;font-size:14.5px;transition:.2s}
+.filters button:hover{color:var(--tx)}.filters button.on{background:rgba(var(--glow),.14);border-color:var(--acc);color:var(--tx)}
+.gallery{columns:3;column-gap:14px}
+@media(max-width:900px){.gallery{columns:2}}@media(max-width:520px){.gallery{columns:1}}
+.shot{break-inside:avoid;margin:0 0 14px;border-radius:18px;overflow:hidden;position:relative;cursor:zoom-in;border:1px solid var(--line);background:var(--card)}
+.shot img{display:block;width:100%;height:auto;transition:transform .5s var(--ease)}
+.shot:hover img{transform:scale(1.04)}
+.shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(4,8,14,.85));font-size:14px;font-weight:600;opacity:0;transition:.25s}
+.shot:hover figcaption,.shot:focus figcaption{opacity:1}
+@media(hover:none){.shot figcaption{opacity:1}}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(3,6,11,.92);backdrop-filter:blur(8px);display:grid;place-items:center;padding:24px;cursor:zoom-out}
+.lb figure{margin:0;max-width:min(92vw,900px);text-align:center}.lb img{max-width:100%;max-height:82vh;border-radius:16px;display:block;margin:0 auto}
+.lb figcaption{margin-top:14px;color:var(--mut);font-size:15px}
+.lb-x{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.08);color:#fff;font-size:18px;cursor:pointer}
+.ph-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.ph-fig{margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px -30px rgba(var(--glow),.4);max-height:460px}
+.ph-fig img{display:block;width:100%;height:100%;max-height:460px;object-fit:cover}
+@media(max-width:900px){.ph-grid{grid-template-columns:1fr;gap:26px}.ph-fig{max-height:300px}.ph-fig img{max-height:300px}}
+.shot[hidden]{display:none}

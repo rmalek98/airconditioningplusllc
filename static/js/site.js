@@ -5,6 +5,10 @@ const money=n=>Math.round(n||0).toLocaleString();
 document.addEventListener('DOMContentLoaded',()=>{
   const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // Housecall Pro: booking links open its popup when the widget script has loaded; otherwise they just follow the link (new tab)
+  const bookUrl=document.body.dataset.bookUrl;
+  if(bookUrl)document.addEventListener('click',e=>{const a=e.target.closest('a[href]');
+    if(a&&a.href===bookUrl&&window.HCPWidget&&typeof HCPWidget.openModal==='function'){e.preventDefault();HCPWidget.openModal()}});
   document.querySelectorAll('a[href^="http"]').forEach(a=>{if(a.host!==location.host){a.target='_blank';a.rel='noopener'}});
   
 });
@@ -51,3 +55,19 @@ function tracker(initial){return{code:initial||'',job:null,err:'',poll:null,
   async lookup(){this.err='';clearInterval(this.poll);const code=this.code.trim();if(!code)return;
     const go=async()=>{const r=await fetch('/api/track/'+encodeURIComponent(code));if(r.ok)this.job=await r.json();else{this.job=null;this.err='No job found with that code.';clearInterval(this.poll)}};
     await go();if(this.job)this.poll=setInterval(go,4000)}}}
+
+
+/* Work gallery: filter + enlarge (plain JS, no framework dependency) */
+document.addEventListener('click',e=>{
+  const fb=e.target.closest('.filters button[data-f]');
+  if(fb){const f=fb.dataset.f;fb.parentElement.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b===fb));
+    document.querySelectorAll('.shot').forEach(s=>{s.hidden=!(f==='all'||s.dataset.cat===f)});return}
+  const shot=e.target.closest('.shot');
+  if(shot){const img=shot.querySelector('img'),cap=shot.querySelector('figcaption');
+    const lb=document.createElement('div');lb.className='lb';lb.innerHTML='<button class="lb-x" aria-label="Close">✕</button><figure><img><figcaption></figcaption></figure>';
+    lb.querySelector('img').src=img.currentSrc||img.src;lb.querySelector('img').alt=img.alt;lb.querySelector('figcaption').textContent=cap?cap.textContent:'';
+    document.body.appendChild(lb);return}
+  const lb=e.target.closest('.lb');if(lb)lb.remove();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.lb').forEach(l=>l.remove());
+  if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('shot')){e.preventDefault();e.target.click()}});
