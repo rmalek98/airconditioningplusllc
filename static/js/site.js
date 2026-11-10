@@ -65,7 +65,7 @@ document.addEventListener('click',e=>{
   const shot=e.target.closest('.shot');
   if(shot){const img=shot.querySelector('img'),cap=shot.querySelector('figcaption');
     const lb=document.createElement('div');lb.className='lb';lb.innerHTML='<button class="lb-x" aria-label="Close">✕</button><figure><img><figcaption></figcaption></figure>';
-    lb.querySelector('img').src=img.currentSrc||img.src;lb.querySelector('img').alt=img.alt;lb.querySelector('figcaption').textContent=cap?cap.textContent:'';
+    lb.querySelector('img').src=(img.currentSrc||img.src).replace('-sq.jpg','.jpg');lb.querySelector('img').alt=img.alt;lb.querySelector('figcaption').textContent=cap?cap.textContent:'';
     document.body.appendChild(lb);return}
   const lb=e.target.closest('.lb');if(lb)lb.remove();
 });

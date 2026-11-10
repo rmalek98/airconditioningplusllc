@@ -336,3 +336,20 @@ body.heat .nav.stuck:before{background:rgba(13,9,7,.88)}
 .ph-fig img{display:block;width:100%;height:100%;max-height:460px;object-fit:cover}
 @media(max-width:900px){.ph-grid{grid-template-columns:1fr;gap:26px}.ph-fig{max-height:300px}.ph-fig img{max-height:300px}}
 .shot[hidden]{display:none}
+
+/* ---- uniform photo grid (overrides the earlier masonry) ---- */
+.gallery{columns:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr);gap:10px}}
+.shot{margin:0;aspect-ratio:1/1;break-inside:auto}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot:hover img{transform:scale(1.05)}
+.shot figcaption{padding:44px 16px 14px;font-size:13.5px}
+/* booking page: the Housecall Pro form sits in a clean white card inside our layout */
+.bookframe{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(var(--glow),.5);border:1px solid var(--line)}
+.hcp-frame{display:block;width:100%;height:min(820px,calc(100dvh - 160px));min-height:640px;border:0}
+.ph-fig img{object-position:center}
+/* booking page: Housecall Pro's widget re-parented into the page */
+.bookhost{border-radius:24px;overflow:hidden;background:#ececec;border:1px solid var(--line);box-shadow:0 40px 90px -40px rgba(var(--glow),.5);min-height:640px}
+.bookhost .hcp-widget{position:static!important;display:flex!important;inset:auto!important;width:100%!important;height:min(820px,calc(100dvh - 150px))!important;min-height:640px;background:#ececec!important;z-index:auto!important}
+.bookhost .hcp-widget iframe{width:100%!important;height:100%!important}
+.bh-load{color:#666;text-align:center;padding:60px 20px}
