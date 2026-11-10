@@ -353,3 +353,8 @@ body.heat .nav.stuck:before{background:rgba(13,9,7,.88)}
 .bookhost .hcp-widget{position:static!important;display:flex!important;inset:auto!important;width:100%!important;height:min(820px,calc(100dvh - 150px))!important;min-height:640px;background:#ececec!important;z-index:auto!important}
 .bookhost .hcp-widget iframe{width:100%!important;height:100%!important}
 .bh-load{color:#666;text-align:center;padding:60px 20px}
+
+/* brand logo is a wide emblem: size by height */
+.logo-img{width:auto;height:52px;max-width:none}
+.foot .logo-img{height:64px}
+@media(max-width:420px){.logo-img{height:46px}}
