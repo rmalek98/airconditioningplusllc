@@ -11,24 +11,45 @@
 <script src="/airconditioningplusllc/static/js/site.js"></script><script defer src="/airconditioningplusllc/static/alpine.min.js"></script></head>
 
 <body>
-<nav x-data="{open:false}"><div class="wrap">
-  <a href="/airconditioningplusllc/" class="logo" aria-label="Air Conditioning Plus home"><img class="logo-img" src="/airconditioningplusllc/static/img/acplus-mark.svg" alt="" width="40" height="40"><span class="logo-txt"><b>Air Conditioning Plus</b><small>Cooling &amp; Heating</small></span></a>
-  <div class="links">
-    <a href="/airconditioningplusllc/services/" class="">Services</a>
-    
-    <a href="/airconditioningplusllc/service-areas/" class="">Service Areas</a>
-    
-    
-    <a href="/airconditioningplusllc/tips/" class="">Tips</a>
-    <a href="/airconditioningplusllc/about/" class="">About</a>
-    <a href="/airconditioningplusllc/contact/" class="">Contact</a>
+<div class="topbar"><div class="wrap">
+  <span class="tb-l"><span class="dot"></span>24/7 emergency availability · Weekend appointments available</span>
+  <span class="tb-r"><span class="tb-lic">Licensed · CAC1825106</span><a href="tel:+16562034099">656-203-4099</a></span>
+</div></div>
+<header class="nav" x-data="{open:false,mega:false,stuck:false}" @keydown.escape.window="open=false;mega=false" :class="{stuck:stuck}" x-init="addEventListener('scroll',()=>stuck=scrollY>8,{passive:true})">
+  <div class="nav-in wrap">
+    <a href="/airconditioningplusllc/" class="logo" aria-label="Air Conditioning Plus home"><img class="logo-img" src="/airconditioningplusllc/static/img/acplus-mark.svg" alt="" width="38" height="38"><span class="logo-txt">Air Conditioning <em>Plus</em></span></a>
+    <div class="menu" role="navigation" aria-label="Main">
+      <div class="has-mega" @mouseenter="mega=true" @mouseleave="mega=false">
+        <a href="/airconditioningplusllc/services/" class="mi " aria-haspopup="true" :aria-expanded="mega" @focus="mega=true">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 3.5l3 3 3-3"/></svg></a>
+        <div class="mega" x-show="mega" x-cloak x-transition.opacity.duration.150ms>
+          <div class="mega-grid"></div>
+          <a class="mega-foot" href="/airconditioningplusllc/services/">View all services →</a>
+        </div>
+      </div>
+      
+      <a href="/airconditioningplusllc/service-areas/" class="mi ">Service Areas</a>
+      
+      
+      <a href="/airconditioningplusllc/tips/" class="mi ">Tips</a>
+      <a href="/airconditioningplusllc/about/" class="mi ">About</a>
+      <a href="/airconditioningplusllc/contact/" class="mi ">Contact</a>
+    </div>
+    <div class="nav-act">
+      
+      <a href="tel:+16562034099" class="nav-call" aria-label="Call 656-203-4099"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.300-1.300a2 2 0 0 1 2.100-.4c.9.3 1.800.6 2.800.7a2 2 0 0 1 1.700 2z"/></svg><span class="nc-num">656-203-4099</span></a>
+      <a href="/airconditioningplusllc/contact/" class="btn pri sm nav-book">Request service</a>
+      <button class="burger" @click="open=!open" :aria-expanded="open" aria-label="Menu"><span :class="{x:open}"></span></button>
+    </div>
   </div>
-  <div style="display:flex;gap:10px;align-items:center">
-    <a href="tel:+16562034099" class="btn sm hide-sm" style="white-space:nowrap">📞 656-203-4099</a><a href="/airconditioningplusllc/contact/" class="btn pri sm" style="white-space:nowrap">Request service</a>
-    
-    <button class="burger" @click="open=!open" aria-label="Menu" x-text="open?'✕':'☰'"></button></div>
-</div>
-<div class="mobmenu" x-show="open" x-cloak @click="open=false"><a href="/airconditioningplusllc/services/">Services</a><a href="/airconditioningplusllc/service-areas/">Service areas</a><a href="/airconditioningplusllc/tips/">Tips</a><a href="/airconditioningplusllc/about/">About</a><a href="/airconditioningplusllc/contact/">Contact</a></div></nav>
+  <div class="sheet" x-show="open" x-cloak x-transition.opacity.duration.150ms @click="open=false">
+    <div class="sheet-in wrap">
+      <a href="/airconditioningplusllc/services/" class="sh-h">Services</a>
+      <div class="sh-grid"></div>
+      <a href="/airconditioningplusllc/service-areas/" class="sh-l">Service areas</a><a href="/airconditioningplusllc/tips/" class="sh-l">Tips</a><a href="/airconditioningplusllc/about/" class="sh-l">About</a><a href="/airconditioningplusllc/contact/" class="sh-l">Contact</a>
+      <div class="sh-cta"><a href="tel:+16562034099" class="btn">Call 656-203-4099</a><a href="/airconditioningplusllc/contact/" class="btn pri">Request service →</a></div>
+    </div>
+  </div>
+</header>
 
 
 <header class="pagehead"><div class="wrap"><div class="eyebrow">404</div><h1>That page <span class="grad">isn't here.</span></h1><p class="sub">It may have moved. Try the home page, or call us at 656-203-4099.</p>
@@ -37,7 +58,7 @@
 
 <footer class="foot"><div class="wrap">
   <div class="cols">
-    <div><a href="/airconditioningplusllc/" class="logo" style="margin-bottom:14px"><img class="logo-img" src="/airconditioningplusllc/static/img/acplus-mark.svg" alt="" width="40" height="40"><span class="logo-txt"><b>Air Conditioning Plus</b><small>Cooling &amp; Heating</small></span></a><p>Get the job done right the first time.</p>
+    <div><a href="/airconditioningplusllc/" class="logo" style="margin-bottom:14px"><img class="logo-img" src="/airconditioningplusllc/static/img/acplus-mark.svg" alt="" width="38" height="38"><span class="logo-txt">Air Conditioning <em>Plus</em></span></a><p>Get the job done right the first time.</p>
       <p style="margin-top:12px"><a href="tel:+16562034099" style="color:var(--acc);font-weight:600;font-size:18px">656-203-4099</a></p>
       <p style="margin-top:6px;font-size:14px">24/7 emergency availability · Weekend appointments available</p>
       <p style="margin-top:6px;font-size:14px">Licensed HVAC contractor · CAC1825106</p>
@@ -49,8 +70,8 @@
   <div class="base"><span>© 2026 Air Conditioning Plus Cooling &amp; Heating LLC · CAC1825106</span></div>
 </div></footer>
 
-<div class="callbar"><a href="tel:+16562034099" class="btn pri">📞 Call 656-203-4099</a><a href="/airconditioningplusllc/contact/" class="btn">Request online</a></div>
-<a href="tel:+16562034099" class="sos">🚨 <span>Emergency? Call now</span></a>
+<div class="callbar"><a href="tel:+16562034099" class="btn cb-call">Call now</a><a href="/airconditioningplusllc/contact/" class="btn pri">Request service</a></div>
+
 
 
 </body></html>

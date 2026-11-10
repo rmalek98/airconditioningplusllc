@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.1});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   document.querySelectorAll('a[href^="http"]').forEach(a=>{if(a.host!==location.host){a.target='_blank';a.rel='noopener'}});
-  const nav=document.querySelector('nav');const f=()=>nav&&nav.classList.toggle('scrolled',scrollY>30);f();addEventListener('scroll',f,{passive:true});
+  
 });
 
 function counters(items){return{stats:items.map(s=>({...s,now:0})),
